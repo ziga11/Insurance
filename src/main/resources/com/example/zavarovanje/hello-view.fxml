@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="350.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zavarovanje.HelloController">
+   <children>
+      <HBox alignment="TOP_CENTER" maxHeight="-Infinity" VBox.vgrow="ALWAYS">
+         <children>
+               <MenuBar minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                   <Menu text="_Datoteka">
+                       <MenuItem onAction="#ShraniCB" text="_Shrani" />
+                       <MenuItem onAction="#izhodCB" text="_Izhod" />
+                   </Menu>
+                   <Menu text="_Popravi">
+                       <MenuItem text="_Izbrisi" />
+                   </Menu>
+                   <Menu text="_Pomoc">
+                       <MenuItem onAction="#avtorCB" text="_O avtorju" />
+                   </Menu>
+               </MenuBar>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+              <Accordion VBox.vgrow="ALWAYS">
+                  <panes>
+                      <TitledPane id="voziloId" animated="false" text="Podatki o vozilu">
+                          <GridPane alignment="CENTER">
+                              <columnConstraints>
+                                  <ColumnConstraints maxWidth="-Infinity" percentWidth="50" />
+                                  <ColumnConstraints percentWidth="50" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                  <RowConstraints percentHeight="25" />
+                                  <RowConstraints percentHeight="25" />
+                                  <RowConstraints percentHeight="25" />
+                                  <RowConstraints percentHeight="25" />
+                              </rowConstraints>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                                    <MenuButton fx:id="znamkaCB" alignment="CENTER" contentDisplay="CENTER" maxHeight="0.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Znamka" HBox.hgrow="ALWAYS">
+                                        <items>
+                                            <MenuItem mnemonicParsing="false" onAction="#SkodaCB" text="Skoda" />
+                                            <MenuItem mnemonicParsing="false" onAction="#GolfCB" text="Golf" />
+                                            <MenuItem mnemonicParsing="false" onAction="#MercedesCB" text="Mercedes" />
+                                            <MenuItem mnemonicParsing="false" onAction="#RenaultCB" text="Renault" />
+                                            <MenuItem mnemonicParsing="false" onAction="#AudiCB" text="Audi" />
+                                            <MenuItem mnemonicParsing="false" onAction="#SkodaCB" text="Suzuki" />
+                                            <MenuItem mnemonicParsing="false" onAction="#SkodaCB" text="Peugeot" />
+                                        </items>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                                    </MenuButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <MenuButton fx:id="sedezi" alignment="CENTER" contentDisplay="CENTER" maxHeight="0.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Št. sedežev" HBox.hgrow="ALWAYS">
+                                        <items>
+                                            <MenuItem mnemonicParsing="false" onAction="#one" text="1" />
+                                            <MenuItem mnemonicParsing="false" onAction="#two" text="2" />
+                                            <MenuItem mnemonicParsing="false" onAction="#three" text="3" />
+                                            <MenuItem mnemonicParsing="false" onAction="#four" text="4" />
+                                            <MenuItem mnemonicParsing="false" onAction="#five" text="5" />
+                                            <MenuItem fx:id="Drugo" mnemonicParsing="false" text="6">
+                                                <graphic>
+                                                    <Slider fx:id="Slider" />
+                                                </graphic>
+                                            </MenuItem>
+                                        </items>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                                    </MenuButton>
+                           </children>
+                        </HBox>
+                              <Separator layoutY="50.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <ColorPicker fx:id="barvaCB" cache="true" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" pickOnBounds="false" promptText="Barva" HBox.hgrow="ALWAYS">
+                                        <opaqueInsets>
+                                            <Insets />
+                                        </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                                    </ColorPicker>
+                           </children>
+                        </HBox>
+                              <Separator GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator layoutY="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator layoutY="50.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator layoutX="20.0" layoutY="54.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                           <children>
+                                    <Slider fx:id="mocSlider" maxWidth="1.7976931348623157E308" prefHeight="4.0" prefWidth="156.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin></Slider>
+                                    <TextField fx:id="MocCB" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="141.0" promptText="Moč (kW)" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                                    <MenuButton fx:id="gorivo" alignment="CENTER" contentDisplay="CENTER" maxHeight="0.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Gorivo" HBox.hgrow="ALWAYS">
+                                        <items>
+                                            <MenuItem mnemonicParsing="false" onAction="#Dizel" text="Dizel" />
+                                            <MenuItem mnemonicParsing="false" onAction="#Benzin" text="Benzin" />
+                                            <MenuItem mnemonicParsing="false" onAction="#Elektrika" text="Elektrika" />
+                                        </items>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                                    </MenuButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <MenuButton fx:id="TipVozila" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Tip Vozila" HBox.hgrow="ALWAYS">
+                                        <items>
+                                            <MenuItem mnemonicParsing="false" onAction="#Tovornjak" text="Tovornjak" />
+                                            <MenuItem mnemonicParsing="false" onAction="#Motor" text="Motor" />
+                                            <MenuItem mnemonicParsing="false" onAction="#Traktor" text="Traktor" />
+                                            <MenuItem mnemonicParsing="false" onAction="#Avtobus" text="Avtobus" />
+                                            <MenuItem mnemonicParsing="false" onAction="#OsebniAvto" text="Osebni Avto" />
+                                        </items>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                                    </MenuButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                                    <TextField fx:id="oznaka" alignment="CENTER" maxHeight="0.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" promptText="Oznaka" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#VoziloPobrisi" text="Pobrisi" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                              <Separator layoutX="20.0" layoutY="217.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                          </GridPane>
+                      </TitledPane>
+                      <TitledPane id="osebaId" animated="false" text="Podatki o zavarovancu">
+                          <GridPane alignment="CENTER">
+                              <columnConstraints>
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="50" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="50" prefWidth="100.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="20" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="20" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="20" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="20" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="20" prefHeight="30.0" vgrow="ALWAYS" />
+                              </rowConstraints>
+                        <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <TextField fx:id="imeCB" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Ime" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <TextField fx:id="priimekCB" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Priimek" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <TextField fx:id="hisnaCB" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Hišna št." HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <TextField fx:id="ulicaCB" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Ulica" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <TextField fx:id="postnaCB" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Poštna št." HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                    <TextField fx:id="krajCB" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Kraj" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                                          <DatePicker fx:id="datumCB" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" promptText="Rojstni datum" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></DatePicker>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" GridPane.rowIndex="4">
+                           <children>
+                                    <RadioButton maxWidth="-Infinity" mnemonicParsing="false" text="Mladi voznik">
+                                        <toggleGroup>
+                                            <ToggleGroup fx:id="tipVoznika" />
+                                        </toggleGroup>
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton maxWidth="-Infinity" mnemonicParsing="false" text="Izkušeni voznik" toggleGroup="$tipVoznika">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                                    </RadioButton>
+                           </children>
+                        </HBox>
+                              <Separator halignment="RIGHT" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator layoutX="20.0" layoutY="66.0" minHeight="-Infinity" minWidth="-Infinity" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets top="92.0" />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator halignment="RIGHT" layoutX="20.0" layoutY="20.0" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator minHeight="-Infinity" minWidth="-Infinity" prefWidth="284.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator layoutX="20.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets top="91.0" />
+                                  </GridPane.margin>
+                        </Separator>
+                        <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                                    <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pobrisiOseba" text="Pobrisi" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                              <Separator layoutX="309.0" layoutY="177.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="309.0" layoutY="46.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="284.0" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator minWidth="-Infinity" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator halignment="RIGHT" layoutX="303.0" layoutY="233.0" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                              </Separator>
+                              <Separator halignment="RIGHT" layoutX="303.0" layoutY="74.0" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                              </Separator>
+                              <Separator halignment="RIGHT" layoutX="303.0" layoutY="127.0" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                              </Separator>
+                              <Separator layoutX="20.0" layoutY="127.0" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                          </GridPane>
+                      </TitledPane>
+                      <TitledPane id="zavarovanjeId" animated="false" text="Podatki o zavarovanju">
+                          <GridPane alignment="CENTER">
+                              <columnConstraints>
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="50" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="50" prefWidth="100.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                  <RowConstraints minHeight="10.0" percentHeight="25" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="25" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="25" prefHeight="30.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="10.0" percentHeight="25" prefHeight="30.0" vgrow="ALWAYS" />
+                              </rowConstraints>
+                              <DatePicker fx:id="registracijaCB" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Datum prve registracije" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets left="10.0" right="15.0" />
+                                  </GridPane.margin>
+                        </DatePicker>
+                              <TextField fx:id="RegistrskaOznacba" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Registrska označba" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets left="10.0" right="15.0" />
+                                  </GridPane.margin>
+                        </TextField>
+                              <TextField fx:id="KrajRegistracije" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" promptText="Kraj prve registracije" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets left="10.0" right="15.0" />
+                                  </GridPane.margin>
+                        </TextField>
+                              <MenuButton fx:id="Zavarovanje" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Osnovno zavarovanje" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <items>
+                                      <MenuItem mnemonicParsing="false" onAction="#AO" text="AO" />
+                                      <MenuItem mnemonicParsing="false" onAction="#AOplus" text="AO+" />
+                                  </items>
+                                  <GridPane.margin>
+                                      <Insets left="10.0" right="15.0" />
+                                  </GridPane.margin>
+                              </MenuButton>
+                              <MenuButton fx:id="Kasko" alignment="CENTER" layoutX="20.0" layoutY="79.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kasko" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <items>
+                                      <MenuItem mnemonicParsing="false" onAction="#brez" text="Brez" />
+                                      <MenuItem mnemonicParsing="false" onAction="#Fransiza" text="Odbitna franšiza" />
+                                      <MenuItem mnemonicParsing="false" onAction="#Polno" text="Polno" />
+                                  </items>
+                                  <GridPane.margin>
+                                      <Insets left="10.0" right="15.0" />
+                                  </GridPane.margin>
+                              </MenuButton>
+                              <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#IzbrisiCB" text="Izbriši Vse" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets left="45.0" right="45.0" />
+                                  </GridPane.margin>
+                        </Button>
+                              <Button alignment="CENTER" layoutX="20.0" layoutY="217.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ShraniCB" text="Shrani" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets left="45.0" right="45.0" />
+                                  </GridPane.margin>
+                        </Button>
+                              <Separator GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="20.0" layoutY="230.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="20.0" layoutY="230.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator minHeight="160.0" orientation="VERTICAL" prefHeight="300.0" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <Separator layoutX="20.0" layoutY="20.0" minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                                  <GridPane.margin>
+                                      <Insets />
+                                  </GridPane.margin>
+                        </Separator>
+                              <MenuButton fx:id="DodatnoZavarovanje" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Dodatno zavarovanje" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                  <items>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false">
+                                          <content>
+                                              <CheckBox fx:id="GumeCB" text="Gum" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                          <content>
+                                              <CheckBox fx:id="TocaCB" text="Proti toči" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                          <content>
+                                              <CheckBox fx:id="ParkingCB" text="Na parkirišču" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                          <content>
+                                              <CheckBox fx:id="KrajaCB" text="Proti kraji" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                          <content>
+                                              <CheckBox fx:id="TretjaCB" text="Tretje osebe" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                          <content>
+                                              <CheckBox fx:id="PotnikiCB" text="Potnikov" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                      <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                          <content>
+                                              <CheckBox fx:id="SteklaCB" text="Stekel" />
+                                          </content>
+                                          <graphic>
+                                              <CheckBox mnemonicParsing="false" text="CheckBox" />
+                                          </graphic>
+                                      </CustomMenuItem>
+                                  </items>
+                                  <GridPane.margin>
+                                      <Insets left="10.0" right="15.0" />
+                                  </GridPane.margin>
+                              </MenuButton>
+                              <Separator layoutX="303.0" layoutY="87.0" minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="303.0" layoutY="154.0" minHeight="-Infinity" orientation="VERTICAL" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="20.0" layoutY="151.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="20.0" layoutY="217.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                              <Separator layoutX="20.0" layoutY="84.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM" />
+                          </GridPane>
+                      </TitledPane>
+                  </panes>
+              </Accordion>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <children>
+              <Label fx:id="status" alignment="CENTER" contentDisplay="BOTTOM" text="Status:" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
